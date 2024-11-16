@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Portal - Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="material-icons">inventory</span>
+                <h2>Supplier Portal</h2>
+            </div>
+            <!-- Update the sidebar navigation -->
+<aside class="sidebar">
+    <div class="logo">
+        <span class="material-icons">inventory</span>
+        <h2>Supplier Portal</h2>
+    </div>
+    <nav>
+        <a href="#settings" class="nav-item">
+            <span class="material-icons">settings</span>
+            <span>ការកំណត់ទូទៅ</span>
+        </a>
+        <a href="#finance" class="nav-item">
+            <span class="material-icons">account_balance</span>
+            <span>ថ្លៃកសាងប្រាក់</span>
+        </a>
+        <a href="#products" class="nav-item">
+            <span class="material-icons">inventory_2</span>
+            <span>ថ្លៃកវិក្កយប័ត្រ</span>
+        </a>
+        <a href="#price" class="nav-item">
+            <span class="material-icons">local_offer</span>
+            <span>ថ្លៃកសំណាយ</span>
+        </a>
+        <a href="#reports" class="nav-item">
+            <span class="material-icons">bar_chart</span>
+            <span>ថ្លៃកហាយសាល័យ</span>
+        </a>
+        <a href="#calendar" class="nav-item">
+            <span class="material-icons">calendar_today</span>
+            <span>ទិន្នន័យ</span>
+        </a>
+    </nav>
+</aside>
+            <nav>
+                <a href="#" class="active">
+                    <span class="material-icons">inventory_2</span>
+                    គ្រប់គ្រងផលិតផល
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="product-section">
+                <h1>គ្រប់គ្រងផលិតផល</h1>
+                
+                <!-- Add Product Form -->
+                <div class="add-product-form">
+                    <h2>បន្ថែមផលិតផលថ្មី</h2>
+                    <form id="productForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>ឈ្មោះផលិតផល</label>
+                                <input type="text" id="productName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>លេខកូដ SKU</label>
+                                <input type="text" id="sku" required>
+                            </div>
+                            <div class="form-group">
+                                <label>តម្លៃ</label>
+                                <input type="number" id="price" required>
+                            </div>
+                            <div class="form-group">
+                                <label>ចំនួនក្នុងស្តុក</label>
+                                <input type="number" id="quantity" required>
+                            </div>
+                            <div class="form-group">
+                                <label>ប្រភេទ</label>
+                                <select id="category" required>
+                                    <option value="">ជ្រើសរើសប្រភេទ</option>
+                                    <option value="electronics">អេឡិចត្រូនិច</option>
+                                    <option value="clothing">សម្លៀកបំពាក់</option>
+                                    <option value="food">អាហារ</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>ស្ថានភាព</label>
+                                <select id="status" required>
+                                    <option value="active">សកម្ម</option>
+                                    <option value="inactive">អសកម្ម</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">បន្ថែមផលិតផល</button>
+                    </form>
+                </div>
+
+                <!-- Products Table -->
+                <div class="products-table">
+                    <h2>បញ្ជីផលិតផល</h2>
+                    <table id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>ឈ្មោះផលិតផល</th>
+                                <th>SKU</th>
+                                <th>តម្លៃ</th>
+                                <th>ចំនួនក្នុងស្តុក</th>
+                                <th>ប្រភេទ</th>
+                                <th>ស្ថានភាព</th>
+                                <th>សកម្មភាព</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Add this button after the products table -->
+<div class="table-actions">
+    <button class="btn-print" onclick="printProducts()">
+        <span class="material-icons">print</span>
+        បោះពុម្ពបញ្ជីផលិតផល
+    </button>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
